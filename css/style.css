@@ -61,39 +61,66 @@ main {
     /* border: 2px dotted black; */
     cursor: pointer;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
-/* RIVEDERE */
+/* DO HOVER ALLA CARD PER FARLA RUOTARE DI 45 GRADI  CON UNA TRANSIZIONE DI 0.6 S */
 .card:hover{   
     transform: rotate(45deg);
-    transition-delay: 80ms;
+    transition: 0.6s ;
 }
 
+/* SETTO IMMAGINE DOVE GLI DICO DI PRENDERE IL 100% DELLA CARD */
 .card img{
     width: 100%;
     padding: 15px;
 }
 
+/* DO UN PO DI PADDING LATERALE E SOTTO ALLE SCRITTE  */
 .container-text{
     padding: 0 15px;
     padding-bottom: 10px;
 }
 
 
+/* DO IL FONT FAMILY AL TITOLO E ANCHE UN FONT SIZE */
 .container-text h4{
     font-family: "Edu Tas Beginner", sans-serif;
     font-size: 20px;
 }
 
+
+/* LA STESSA COSA ANCHE QUI */
 .container-text p{
     font-family: "Sometype Mono", "monospace";
     font-size: 15px;
     color: gray;
 }
 
+
+/* SETTO IL PUNTO ROSSO CON POSITION ABSOLUTE CON UN TOP E LEFT E CENTRO IL PUNTO  */
+.punto{
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+/* SETTO IL DISPLAY NONE SUL PUNTO ALL PASSARE DEL MOUSE  */
+.card:hover .punto{
+    display: none;
+}
+
+
 /**************FINISH MAIN SET***********/
 
 
 
 
+
+
+
+
 /* PARTE MEDIA QUERY */
+

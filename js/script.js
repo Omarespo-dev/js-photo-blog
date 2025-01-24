@@ -5,6 +5,7 @@
 // 1 STEP PRENDIAMO ELEMENTO OUTPUT NEL DOM
 const containerAll = document.querySelector(".container-all")
 
+
 // 2 STEP SETTO ENDPOINT
 const endpoint = "https://lanciweb.github.io/demo/api/pictures/"
 
@@ -23,11 +24,15 @@ axios.get(endpoint)
             // ORA ATTRAVERSO OBJECT RICAVIAMO URL-DATE-TITLE
             containerAll.innerHTML +=`
             <div class="card">
+                <div class="punto">
+                    <img src="./img/pin.svg" alt="">
+                </div>
                 <img src="${object.url}" alt="${object.title}">
                 <div class="container-text">
                     <p>${object.date}</p>
                     <h4>${object.title.toUpperCase()}</h4>
                 </div>
+                
             </div>`
         });
     })
