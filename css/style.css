@@ -18,7 +18,7 @@ header {
 }
 
 header h1 {
-    font-size: 55px;
+    font-size: 60px;
 }
 /**************FINISH HEADER SET***********/
 
@@ -45,7 +45,7 @@ main {
 }
 
 
-/* CARD-TEXT-IMG */
+/* CARD-TEXT-IMG- */
 .card{
     width: 350px;
     background-color: white;
