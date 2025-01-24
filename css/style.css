@@ -1,0 +1,79 @@
+/* RESET */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+/****************HEADER SET ********************/
+header {
+    font-family: "Edu Tas Beginner", sans-serif;
+    background-image: url(../img/wall.png);
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 55px;
+}
+/**************FINISH HEADER SET***********/
+
+
+
+
+
+
+/**************** MAIN SET ********************/
+main {
+    background-image: url(../img/cork.png);
+    display: flex;
+    justify-content: center;
+    
+}
+
+/* CONTAINER DOVE ALL INTERNO ABBIAMO LE CARD CON TUTTE LE CARATTERISTICHE */
+.container-all{
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    justify-content: center;
+    gap: 2%;
+}
+
+
+/* CARD-TEXT-IMG */
+.card{
+    width: 350px;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    /* border: 2px dotted black; */
+}
+
+.card img{
+    width: 100%;
+    padding: 15px;
+}
+
+.container-text{
+    padding: 0 15px;
+    padding-bottom: 10px;
+}
+
+
+.container-text h4{
+    font-family: "Edu Tas Beginner", sans-serif;
+    font-size: 20px;
+}
+
+.container-text p{
+    font-family: "Sometype Mono", "monospace";
+    font-size: 15px;
+    color: gray;
+}
+
+/**************FINISH MAIN SET***********/
