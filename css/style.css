@@ -70,7 +70,7 @@ main {
 .card:hover{   
     transform: rotate(30deg);
     transition: 0.6s ;
-    z-index: 50;
+    z-index: 10;
 }
 
 /* SETTO IMMAGINE DOVE GLI DICO DI PRENDERE IL 100% DELLA CARD */
@@ -116,31 +116,49 @@ main {
 }
 
 
-main{
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* background-blend-mode: overlay; */
 
-}
-.containerImg{
-    position: absolute;
-    top: 40%;
+.all{
+    position: relative;
+    /* position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
-    
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 20; */
+}
+
+.containerImg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 20;
 }
 
 .containerImg button{
-    margin-bottom: 100px;
+    margin-bottom: 80px;
+    margin-top: 80px;
+    
 }
 
 
 .image img{
    border-radius:20px;
-   
+   height: 60vh;
 }
 
+.none{
+    display: none;
+}
 
 
 /**************FINISH MAIN SET***********/
@@ -162,6 +180,10 @@ main{
     .card{
       width: 45%;
     }
+
+    .image img{
+        height: 50vh;
+    }
 }
 
 /* VERSIONE MOBILE HEIGHT E ALTEZZA */
@@ -175,6 +197,10 @@ main{
 
     header h1 {
         font-size: 50px;
+    }
+
+    .image img{
+        height: 30vh;
     }
 }
 
