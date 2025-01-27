@@ -21,20 +21,28 @@ axios.get(endpoint)
 
         // PER RICAVARE GLI OGGETTI ALL INTERNO DELL ARRAY POSSO USARE O UN CICLO FOR OPPURE UN FOREACH
         data.forEach(object => {
+            
             // ORA ATTRAVERSO OBJECT RICAVIAMO URL-DATE-TITLE
             containerAll.innerHTML +=`
             <div class="card">
+                
                 <div class="punto">
                     <img src="./img/pin.svg" alt="">
                 </div>
-                <img src="${object.url}" alt="${object.title}">
+                
+                 <img src="${object.url}" alt="${object.title}">
+                
                 <div class="container-text">
                     <p>${object.date}</p>
                     <h4>${object.title.toUpperCase()}</h4>
                 </div>
                 
             </div>`
+            
         });
+
+
+        
     })
 
     .catch(error => {

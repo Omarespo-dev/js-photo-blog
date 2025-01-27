@@ -35,7 +35,7 @@ main {
     background-image: url(../img/cork.png);
     display: flex;
     justify-content: center;
-    padding-bottom: 70px;
+    padding-bottom: 85px;
     padding-top: 40px;
     min-height: 100vh;
 }
@@ -68,7 +68,7 @@ main {
 
 /* DO HOVER ALLA CARD PER FARLA RUOTARE DI 45 GRADI  CON UNA TRANSIZIONE DI 0.6 S */
 .card:hover{   
-    transform: rotate(45deg);
+    transform: rotate(30deg);
     transition: 0.6s ;
     z-index: 50;
 }
@@ -116,7 +116,37 @@ main {
 }
 
 
+main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* background-blend-mode: overlay; */
+
+}
+.containerImg{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    
+}
+
+.containerImg button{
+    margin-bottom: 100px;
+}
+
+
+.image img{
+   border-radius:20px;
+   
+}
+
+
+
 /**************FINISH MAIN SET***********/
+
+
+
 
 
 
@@ -127,15 +157,8 @@ main {
 
 /* PARTE MEDIA QUERY */
 
-/* VERSIONE TABLET HEIGHT */
-@media screen and (max-width: 1024px) {
-  .card{
-    width: 40%;
-  }
-}
-
-/* VERSIONE TABLET LARGHEZZA*/
-@media screen and (max-width: 768px) and (min-width: 500px){
+/* VERSIONE TABLET  HEIGHT LARGHEZZA*/
+@media screen and (max-width: 1024px) and (min-width: 500px){
     .card{
       width: 45%;
     }
@@ -149,4 +172,10 @@ main {
     main{
         padding-bottom: 80px;
     }
+
+    header h1 {
+        font-size: 50px;
+    }
 }
+
+
