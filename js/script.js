@@ -18,6 +18,7 @@ axios.get(endpoint)
         
         // RICAVO I DATA DALL ENDPOINT
         const data = response.data
+        console.log(data)
 
         // PER RICAVARE GLI OGGETTI ALL INTERNO DELL ARRAY POSSO USARE O UN CICLO FOR OPPURE UN FOREACH
         data.forEach(object => {
@@ -30,7 +31,7 @@ axios.get(endpoint)
                     <img src="./img/pin.svg" alt="">
                 </div>
                 
-                 <img src="${object.url}" alt="${object.title}" class="img">
+                <img src="${object.url}" alt="${object.title}" class="img">
                 
                 <div class="container-text">
                     <p>${object.date}</p>
@@ -63,7 +64,7 @@ axios.get(endpoint)
             
             // POI DO L EVENTO AL CLICK DELL OBJECT 
             object.addEventListener("click", function (){
-                
+                console.log(object)
                 // POI GLI DICO DI PRENDERE L ELEMENTO DI OUTPUT E DI RIMUOVERGLI LA CLASSE CHE HA IL DISPLAY NONE
                 all.classList.remove("none")
             
@@ -77,6 +78,7 @@ axios.get(endpoint)
                     </div>  
                 </div>
                 `
+                
                 // DICHIARO LA VARIABILE DEL BUTTON ----- RICAVANDOLA DAL DOM
                 const button = document.getElementById("bottone")
 

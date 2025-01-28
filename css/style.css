@@ -2,7 +2,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* In teoria lo usiamo perche senza il border box gli elementi saranno piu grandi se si aggiunge del padding o margin invece con border box fa si che gli elementi hanno gia il padding e margin incorporati senza aggiungere niente*/
 }
 
 
@@ -12,12 +12,9 @@ header {
     font-family: "Edu Tas Beginner", sans-serif;
     background-image: url(../img/wall.png);
     height: 150px;
-    display: flex;
+    display: flex;  /* DO AL CONTAINER FLEX COSI CHE GLI ELEMENTI INTERNI LI POSSO GESTIRE  PER AVERE UN LAYOUT PIU FLESSIBILE*/
     align-items: center;
     justify-content: center;
-    /* position: sticky;
-    top: 0;
-    right:0; */
 }
 
 header h1 {
@@ -37,7 +34,7 @@ main {
     justify-content: center;
     padding-bottom: 85px;
     padding-top: 40px;
-    min-height: 100vh;
+    min-height: 100vh; /* PRENDE TUTTA L ALTEZZA DEL VIEWPORT CIOE DELLA FINESTRA DEL BROWSER */
 }
 
 /* CONTAINER DOVE ALL INTERNO ABBIAMO LE CARD CON TUTTE LE CARATTERISTICHE */
@@ -61,13 +58,12 @@ main {
     /* border: 2px dotted black; */
     cursor: pointer;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    position: relative;
-    
+    position: relative;  /* Do relative cosi dico alla card di rimanere fissa e di non muoversi poi con l absolute me la gestiscono dicendogli dove deve andare il punto */
     
 }
 
 /* DO HOVER ALLA CARD PER FARLA RUOTARE DI 45 GRADI  CON UNA TRANSIZIONE DI 0.6 S */
-.card:hover{   
+.card:hover{    
     transform: rotate(30deg);
     transition: 0.6s ;
     z-index: 10;
@@ -103,10 +99,11 @@ main {
 
 /* SETTO IL PUNTO ROSSO CON POSITION ABSOLUTE CON UN TOP E LEFT E CENTRO IL PUNTO  */
 .punto{
-    position: absolute;
+    position: absolute;  /*Do position absolute pk e figlio di relative e gestisco il punto dicendogli dove deve mettersi  */
     top: -20px;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%); /* Corregge il left 50% cosi da centrare effettivamente l elemento in modo orizzontale */
+    
 }
 
 
@@ -117,45 +114,44 @@ main {
 
 
 
-.all{
-    position: relative;
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    z-index: 20; */
-}
 
+
+
+
+
+/* SECONDA PARTE DEL CONTAINER CON IL BUTTON E IMG */
+
+/* CONTAINER CHE RACCHIUDE IL TUTTO */
+
+/* CONTAINER CHE RACCHIUDE IL BUTTON E L IMMAGINE  */
 .containerImg{
-    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);  /* Corregge l elemento sia in orizzontale che in verticale */
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
+    position: fixed;    /* Do position fixed cosi l elemento rimae sempre nello stesso punto anche quando scrollo la page  */
     height: 100vh;
     width: 100%;
     z-index: 20;
 }
 
+/* SET BUTTON */
 .containerImg button{
     margin-bottom: 80px;
     margin-top: 80px;
     
 }
 
-
+/* DIV IMAGE DOVE PRENDO L IMMAGINE  */
 .image img{
    border-radius:20px;
    height: 60vh;
 }
 
+
+
+/* CLASSE PER IL DISPLAY NONE  */
 .none{
     display: none;
 }
@@ -177,28 +173,40 @@ main {
 
 /* VERSIONE TABLET  HEIGHT LARGHEZZA*/
 @media screen and (max-width: 1024px) and (min-width: 500px){
+    /* SETTO LARGHEZZA DELLA CARD A TOT PX */
     .card{
       width: 45%;
     }
 
+    /* SETTO IMG A 50 VH PER UNA DIMENSIONE PIU PICCOLA RISPETTO I 60 VH */
     .image img{
         height: 50vh;
     }
 }
 
+
+
+
 /* VERSIONE MOBILE HEIGHT E ALTEZZA */
-@media screen and (max-width: 499px ) and (min-width: 200px){
+@media screen and (max-width: 499px ) and (min-width: 300px){
+    /* SETTO LARGHEZZA DELLA CARD A TOT PX */
     .card{
       width: 90%;
     }
+
+    /* AL MAIN DO UN PADDING BOTTOM */
     main{
         padding-bottom: 80px;
     }
 
+
+    /* SETTO FONT SIZE DELL H1 */
     header h1 {
         font-size: 50px;
     }
 
+
+    /* SETTO IMG A 30 VH PER UNA DIMENSIONE PIU PICCOLA RISPETTO I 50 VH */
     .image img{
         height: 30vh;
     }
